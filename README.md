@@ -2,12 +2,14 @@
 A tutorial for how to use serial to force update you Elegoo Neptune 4 Max 3D-printer.
 (should also work for others)
 
-I've had some problems with my Neptune 4 Max. Other than the bed being a nightmare to level and some factory hot glue getting into the mainboard fan, the updates have been a real pain in the ass too.
+I've had some problems with my Neptune 4 Max. 
+Other than the bed being a nightmare to level and some factory hot glue getting into the mainboard fan, the updates have been a real pain in the ass too.
 The Elegoo documentation will tell you to download the new firmware folder, unzip it and copy the 'ELEGOO_UPDATE_DIR' folder onto a flash drive formatted in fat32. The drive also has to be USB 2.0 (no USB 3.0) and have a capacity of 32GB at most.
 Then the documentation tells you to simply plug your drive in the front USB-A port of your printer, go to 'Setting'->'about this printer' and click the up-arrow.
 
 Let me preface this with saying that this has worked for me before. You should definetely try this first. 
-What I'm about to describe should be your last course of action. Not because it is dangerous or voids your warranty, but because it's fairly technically difficult and should only be attempted by those who don't mind f*cking around.
+
+What I'm about to describe should be your last course of action. Not because it's dangerous or voids your warranty (it's not and it doesn't), but because it's fairly technically difficult and should only be attempted by those who don't mind f*cking around.
 
 One day when I was feeling in the mood, I decided to check the Elegoo Download Centre and check if there where any new firmware files. Sure enough, there where.
 I tried to update my printer using them but as soon as I did, it didn't recognise its components anymore. It wouldn't extrude, move or heat. The touchscreen would work to some extent and the lights would turn on when i turned on the printer but nothing else.
@@ -21,8 +23,11 @@ Since I had informed Elegoo of their faulty firmware downloads that brick printe
 
 The printer crashed immediately. As soon as I plugged in the flash drive, Klipper crashed.
 
-Now, for those who don't know, an EMMC-module is basically a different formfactor for the same storage technology as a SD-card. I ordered a cheap EMMC-flasher with overnight shipping and decided to flash the module directly.
-This, however, can't be done with regular firmware update files. You need a .img-file and all I could find were from two years ago (November 2023). I tried it anyway and the flashing worked. In case you want to try it, here's how I did it:
+Now, for those who don't know, an EMMC-module is basically a different formfactor for the same storage technology as a SD-card. 
+I ordered a cheap EMMC-flasher with overnight shipping and decided to flash the module directly.
+This, however, can't be done with regular firmware update files. 
+You need a .img-file and all I could find were from two years ago (November 2023). 
+I tried it anyway and the flashing worked. In case you want to try it, here's how I did it:
 
 1. Plug the module into the flasher and connect it to your computer.
 2. Download the Raspberry Pi imager.
@@ -50,6 +55,13 @@ Linux (I use Arch btw):
 13. Restart your printer and check if everything works.
 
 This worked for me. Let me know if you have any questions.
+
+Windows:
+1. 1.-2. same as linux.
+2. Install Putty.
+3. Open Putty.
+4. Choose serial with a boud rate of 115200.
+5. Proceed with 7. from the linux tutorial.
 
 
 
