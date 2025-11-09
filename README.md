@@ -24,7 +24,7 @@ The printer crashed immediately. As soon as I plugged in the flash drive, Klippe
 Now, for those who don't know, an EMMC-module is basically a different formfactor for the same storage technology as a SD-card. I ordered a cheap EMMC-flasher with overnight shipping and decided to flash the module directly.
 This, however, can't be done with regular firmware update files. You need a .img-file and all I could find were from two years ago (November 2023). I tried it anyway and the flashing worked. In case you want to try it, here's how I did it:
 
-1. plug the module into the flasher and connect it to your computer.
+1. Plug the module into the flasher and connect it to your computer.
 2. Download the Raspberry Pi imager.
 3. Select the EMMC-module as the target storage and the .img-file under 'custom image'.
 4. Click flash and agree to everything. This will wipe the module so be aware of that.
